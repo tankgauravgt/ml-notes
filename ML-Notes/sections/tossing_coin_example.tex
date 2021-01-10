@@ -1,0 +1,13 @@
+\section{MLE for Tossing Coin Problem}
+
+Each outcome of this experiment can be thought as a sample of bernoulli distribution. Where $\theta$ is a parameter that controls the distribution.
+
+\begin{equation}
+        p\big(y_n | \theta\big) = \theta ^ {y_n} (1 - \theta)^{1 - y_n}
+\end{equation}
+
+Since, each outcome is IID. So, overall likelihood distribution is given by the formula below.
+
+\begin{equation*}
+        p\big(y | \theta\big) = \prod_{n=1}^{N} \theta ^ {y_n} (1 - \theta)^{1 - y_n}
+\end{equation*}

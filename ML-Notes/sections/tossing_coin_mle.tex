@@ -1,0 +1,48 @@
+\subsection{Maximum Likelihood Estimation}
+
+The MLE solution is given by the objective function written below.
+
+\begin{equation*}
+    \theta_{MLE} 
+    =
+    \operatorname*{argmax}_\theta \bigg\{ p\big(y | \theta\big) \bigg\}
+\end{equation*}
+
+\begin{equation}
+    \therefore
+    \theta_{MLE} 
+    =
+    \operatorname*{argmax}_\theta 
+    \bigg\{ \prod_{n=1}^{N} \theta ^ {y_n} (1 - \theta)^{1 - y_n} \bigg\}
+\end{equation}
+
+\medspace
+
+Logarithm function is monotonic. So, we can write above objective as maximizing log-likelihood as given below.
+
+\begin{equation*}
+    \theta_{MLE} 
+    = 
+    \operatorname*{argmax}_\theta
+    \bigg\{ \log{ \Big[ p\big(y | \theta\big) \Big] \bigg\}}
+\end{equation*}
+
+\begin{equation}
+    \therefore
+    \theta_{MLE} 
+    =
+    \operatorname*{argmax}_\theta
+    \bigg\{ \sum_{n=1}^{N} \Big[ \theta \log {y_n} + (1 - \theta) \log{(1 - y_n)} \Big] \bigg\} 
+\end{equation}
+
+\medspace
+
+Closed form solution for MLE is given by:
+
+\begin{equation}
+\boxed{
+    \boxed{
+        \theta_{MLE} = \frac{\sum_{n=1}^{N} I[y_n = 1]}{N}
+    }
+}
+\end{equation}
